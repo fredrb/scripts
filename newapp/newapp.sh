@@ -2,7 +2,8 @@
 
 # @todo: change the hardcoded user name
 function newfile(){
-    file="~/.local/share/applications/$1.desktop"
+    me=$(whoami)
+    file="/home/$me/.local/share/applications/$1.desktop"
     touch $file
     echo "[Desktop Entry]" >> $file
     echo "Version=1.0" >> $file 
